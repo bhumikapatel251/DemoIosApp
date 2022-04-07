@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State private var password = ""
     @State private var confirmPassword = ""
     @Binding var isShow: Bool
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationView {
@@ -38,13 +39,13 @@ struct SignUpView: View {
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
                      //   .border(.red, width: CGFloat(wrongUsername))
-                    SecureField("Password", text: $password)
+                    SecureInputView("Password", text: $password)
                         .padding()
                         .frame(width: 300, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
                        // .border(.red, width: CGFloat(wrongPassword))
-                    SecureField("ConfirmPassword", text: $password)
+                   SecureInputView("ConfirmPassword", text: $confirmPassword)
                         .padding()
                         .frame(width: 300, height: 50)
                         .background(Color.black.opacity(0.05))
@@ -52,6 +53,7 @@ struct SignUpView: View {
                         
                     Button("Create"){
                      //  authenticateUser(username: username, password: password)
+                        showingAlert = true
                     }
                     .frame(width: 200, height: 50)
                     .background(Color.blue)
@@ -59,6 +61,12 @@ struct SignUpView: View {
                     .foregroundColor(.white)
                     .font(.title)
                     .padding()
+                    .alert("Successful Account Create", isPresented: $showingAlert) {
+                
+                        Button("Ok", role: .cancel) {
+                            isShow.toggle()
+                        }
+                    }
                 }
             }
             

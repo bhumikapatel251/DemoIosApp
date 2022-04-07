@@ -13,6 +13,7 @@
 		AC82AEA827FEC3EA00CD093D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC82AEA727FEC3EA00CD093D /* Preview Assets.xcassets */; };
 		AC82AEAF27FEC40200CD093D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82AEAE27FEC40200CD093D /* LoginView.swift */; };
 		AC82AEB127FEC45200CD093D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82AEB027FEC45200CD093D /* SignUpView.swift */; };
+		AC82AEB427FEE57000CD093D /* SecureInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82AEB327FEE57000CD093D /* SecureInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		AC82AEA727FEC3EA00CD093D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC82AEAE27FEC40200CD093D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AC82AEB027FEC45200CD093D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AC82AEB327FEE57000CD093D /* SecureInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		AC82AE9F27FEC3E900CD093D /* DemoIosApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC82AEB227FEE53E00CD093D /* Helper */,
 				AC82AEA027FEC3E900CD093D /* DemoIosAppApp.swift */,
 				AC82AEA227FEC3E900CD093D /* ContentView.swift */,
 				AC82AEAE27FEC40200CD093D /* LoginView.swift */,
@@ -71,6 +74,14 @@
 				AC82AEA727FEC3EA00CD093D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC82AEB227FEE53E00CD093D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AC82AEB327FEE57000CD093D /* SecureInput.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				AC82AEAF27FEC40200CD093D /* LoginView.swift in Sources */,
 				AC82AEA327FEC3E900CD093D /* ContentView.swift in Sources */,
 				AC82AEA127FEC3E900CD093D /* DemoIosAppApp.swift in Sources */,
+				AC82AEB427FEE57000CD093D /* SecureInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

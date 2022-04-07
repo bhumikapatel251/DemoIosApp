@@ -20,10 +20,10 @@ struct Home: View {
             ZStack{
                 NavigationLink(
                     destination: SignUpView(isShow: self.$isShow),
-                isActive: self.$isShow,
-                label:  {
-                Text("")
-                }).hidden()
+                    isActive: self.$isShow,
+                    label:  { Text("") }
+                ).hidden()
+                
              LoginView(isShow: $isShow)
             }
         }
