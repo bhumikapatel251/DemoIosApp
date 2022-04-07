@@ -9,8 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      Home()
+    }
+}
+struct Home: View {
+    @State var isShow = false
+    
+    var body: some View {
+        NavigationView {
+            ZStack{
+                NavigationLink(
+                    destination: SignUpView(isShow: self.$isShow),
+                isActive: self.$isShow,
+                label:  {
+                Text("")
+                }).hidden()
+             LoginView(isShow: $isShow)
+            }
+        }
     }
 }
 

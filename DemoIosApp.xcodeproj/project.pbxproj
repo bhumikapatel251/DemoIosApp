@@ -11,6 +11,8 @@
 		AC82AEA327FEC3E900CD093D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82AEA227FEC3E900CD093D /* ContentView.swift */; };
 		AC82AEA527FEC3EA00CD093D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC82AEA427FEC3EA00CD093D /* Assets.xcassets */; };
 		AC82AEA827FEC3EA00CD093D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC82AEA727FEC3EA00CD093D /* Preview Assets.xcassets */; };
+		AC82AEAF27FEC40200CD093D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82AEAE27FEC40200CD093D /* LoginView.swift */; };
+		AC82AEB127FEC45200CD093D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82AEB027FEC45200CD093D /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		AC82AEA227FEC3E900CD093D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC82AEA427FEC3EA00CD093D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC82AEA727FEC3EA00CD093D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC82AEAE27FEC40200CD093D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AC82AEB027FEC45200CD093D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				AC82AEA027FEC3E900CD093D /* DemoIosAppApp.swift */,
 				AC82AEA227FEC3E900CD093D /* ContentView.swift */,
+				AC82AEAE27FEC40200CD093D /* LoginView.swift */,
+				AC82AEB027FEC45200CD093D /* SignUpView.swift */,
 				AC82AEA427FEC3EA00CD093D /* Assets.xcassets */,
 				AC82AEA627FEC3EA00CD093D /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC82AEB127FEC45200CD093D /* SignUpView.swift in Sources */,
+				AC82AEAF27FEC40200CD093D /* LoginView.swift in Sources */,
 				AC82AEA327FEC3E900CD093D /* ContentView.swift in Sources */,
 				AC82AEA127FEC3E900CD093D /* DemoIosAppApp.swift in Sources */,
 			);
