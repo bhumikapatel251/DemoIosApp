@@ -39,7 +39,7 @@ struct LoginView: View {
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongUsername))
-                    SecureField("Password", text: $password)
+                    SecureInputView("Password", text: $password)
                         .padding()
                         .frame(width: 300, height: 50)
                         .background(Color.black.opacity(0.05))
@@ -98,6 +98,37 @@ func authenticateUser(username: String, password: String) {
             wrongUsername = 2
     }
 }
+}
+
+struct SecureInputView: View {
+    
+    @Binding private var text: String
+    @State private var isSecured: Bool = true
+    private var title: String
+    
+    init(_ title: String, text: Binding<String>) {
+        self.title = title
+        self._text = text
+    }
+    
+    var body: some View {
+        ZStack(alignment: .trailing) {
+            Group {
+                if isSecured {
+                    SecureField(title, text: $text)
+                } else {
+                    TextField(title, text: $text)
+                }
+            }.padding(.trailing, 32)
+
+            Button(action: {
+                isSecured.toggle()
+            }) {
+                Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                    .accentColor(.gray)
+            }
+        }
+    }
 }
 
 //struct LoginView_Previews: PreviewProvider {
