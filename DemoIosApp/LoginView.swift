@@ -86,7 +86,7 @@ struct LoginView: View {
     }
 }
 func authenticateUser(username: String, password: String) {
-    if username.lowercased() == "mario2022" {
+    if username.lowercased().trimmingCharacters(in: [" "]) == "mario2022" {
         wrongUsername = 0
         if password.lowercased() == "abc123" {
             wrongPassword = 0
