@@ -69,7 +69,6 @@ struct SignUpView: View {
                     }
                 }
             }
-            
         }
     }
 }

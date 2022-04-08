@@ -13,6 +13,7 @@ struct LoginView: View {
     @State private var wrongUsername = 0
     @State private var wrongPassword = 0
     @State private var showingLoginScreen = false
+    @Binding var isShow1: Bool
     @Binding var isShow: Bool
     var body: some View {
         NavigationView {
@@ -56,11 +57,11 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .font(.title3)
                     
-                    Button("Forgot Password?"){
-                        
-                        
-                    }
-                    .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.586, saturation: 0.649, brightness: 0.854)/*@END_MENU_TOKEN@*/)
+                    Text("Forget Password?")
+                        .onTapGesture {
+                            self.isShow1.toggle()
+                        }
+                    //.foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.586, saturation: 0.649, brightness: 0.854)/*@END_MENU_TOKEN@*/)
                     
                     HStack {
                         Text("Don't have account? ")

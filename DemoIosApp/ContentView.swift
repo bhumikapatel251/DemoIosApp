@@ -14,6 +14,7 @@ struct ContentView: View {
 }
 struct Home: View {
     @State var isShow = false
+    @State var isShow1 = false
     
     var body: some View {
         NavigationView {
@@ -23,8 +24,12 @@ struct Home: View {
                     isActive: self.$isShow,
                     label:  { Text("") }
                 ).hidden()
-                
-             LoginView(isShow: $isShow)
+                NavigationLink(destination: ForgetPasswordView(isShow1:  self.$isShow1),
+                               isActive: self.$isShow1,
+                               label: { Text("") }
+                ).hidden()
+                LoginView(isShow1: $isShow1, isShow: $isShow)
+             
             }
         }
     }

@@ -10,6 +10,8 @@ import SwiftUI
 struct ForgetPasswordView: View {
     @State private var username = ""
     @State private var wrongUsername = 0
+    @Binding var isShow1: Bool
+    @State private var showingAlert = false
     var body: some View {
         NavigationView {
             ZStack {
@@ -37,8 +39,10 @@ struct ForgetPasswordView: View {
                     .cornerRadius(10)
                     .border(.red, width: CGFloat(wrongUsername))
                     
-                    Button("Send"){
                     
+                    Button("Send"){
+                        
+                        showingAlert = true
                     }
                     .frame(width: 150, height: 40)
                     .background(Color.blue)
@@ -46,14 +50,20 @@ struct ForgetPasswordView: View {
                     
                     .foregroundColor(.white)
                     .font(.title3)
-            }
+                    .alert("Password send Successfully", isPresented: $showingAlert) {
+                
+                        Button("Ok", role: .cancel) {
+                           
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-struct ForgetPasswordView_Previews: PreviewProvider {
-    static var previews: some View {
-        ForgetPasswordView()
-    }
-}
+//struct ForgetPasswordView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ForgetPasswordView()
+//    }
+//}
